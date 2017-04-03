@@ -1,3 +1,5 @@
+/*
+
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 
@@ -16,4 +18,20 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   };
 
   return blinkyDancer;
+};
+
+*/
+
+var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
+  MakeDancer.call(this, top, left, timeBetweenSteps);
+  this.oldStep = this.step;
+
+};
+
+MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
+MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
+
+MakeBlinkyDancer.prototype.step = function () {
+  this.oldStep();
+  this.$node.toggle();
 };
