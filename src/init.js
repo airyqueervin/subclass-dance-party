@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
+    
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
@@ -30,5 +30,24 @@ $(document).ready(function() {
     dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+  $('.lineUpDancers').on('click', function(event) {
+    var width = 10;
+    for(var i = 0; i < window.dancers.length; i++) {
+      width += 100;
+      window.dancers[i].setPosition('10%', width);
+      if (window.dancers[i].name === 'rotateDancer') {
+        
+      }
+    }
+    //when we click
+    //iterate over dancers array
+    //for each dancer, create a variable that has height and width
+    //change each dancers css height and width
+  })
 });
 
+//iterate over array
+  //at each index, set position starting with whatever position we want
+  //increase left and right by 10px
+  //then they pop out

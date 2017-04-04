@@ -26,7 +26,7 @@
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   //console.log(this.step);
-  // this.$node = $('<img class="slideDancer" src="https://media1.giphy.com/media/ZW1efT4aKTKg/200w.webp#0"></img>');
+  //this.$node = $('<img class="slideDancer" src="https://media1.giphy.com/media/ZW1efT4aKTKg/200w.webp#0"></img>');
 };
 
 MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
@@ -34,6 +34,7 @@ MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 MakeBlinkyDancer.prototype.oldStep = MakeDancer.prototype.step;
 
 MakeBlinkyDancer.prototype.step = function () {
+  this.$node.addClass('blinkyDancer');
   this.oldStep.call(this);
   this.$node.toggle();
 };

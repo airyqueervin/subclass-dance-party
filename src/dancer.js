@@ -43,6 +43,9 @@ var MakeDancer = function (top, left, timeBetweenSteps) {
 };
 
 MakeDancer.prototype.step = function() {
+  if(this.timeBetweenSteps < 200) {
+    this.timeBetweenSteps = 200;
+  }
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
