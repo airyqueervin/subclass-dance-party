@@ -14,4 +14,7 @@ MakeSlideDancer.prototype.step = function () {
   this.oldStep.call(this);
   this.$node.addClass('slideDancer');
   this.$node.slideToggle(400, "linear"); //we need it to slide differently 
+  // this.$node.toggle("slide", { direction: "left" }, 1000);
+  // $(this).hide("slide", { direction: "right" }, 1000);
+  // setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
