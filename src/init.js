@@ -33,18 +33,47 @@ $(document).ready(function() {
 
   $('.lineUpDancers').on('click', function(event) {
     var width = 10;
-    for(var i = 0; i < window.dancers.length; i++) {
+    for (var i = 0; i < window.dancers.length; i++) {
       width += 100;
       window.dancers[i].setPosition('10%', width);
       if (window.dancers[i].name === 'rotateDancer') {
-        
+        this.$node;
       }
     }
     //when we click
     //iterate over dancers array
     //for each dancer, create a variable that has height and width
     //change each dancers css height and width
-  })
+  });
+
+  $('.interact').on('click', function(event) {
+    var distance;
+    for (var i = 0; i < window.dancers.length; i++) {
+      for (var j = 0; j < window.dancers.length; j++){
+        var y1 = window.dancers[i].coordinates.top;
+        var y2 = window.dancers[j].coordinates.top;
+        var x1 = window.dancers[i].coordinates.left;
+        var x2 = window.dancers[j].coordinates.left;
+        distance = Math.pow((y1 - y2), 2) + Math.pow((x1 - x2), 2);
+        if (distance < 30000 && distance !== 0) {
+          window.dancers[i].getDown();
+          // window.dancers[j].getDown();
+        }
+      }
+      //find out if they are close
+
+        //
+      //if they are close (distance less than 200px), 
+        //boarders turn off or they do a diff dance move
+
+        //[dancer1, dancer2, dancer3]
+        //we need to comapare dancer1 to dancer2, save this val
+        //then dancer 1 to dancer3, save this va
+        //compare all vals to see which is smallest
+
+    }
+  });
+
 });
 
 //iterate over array

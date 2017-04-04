@@ -27,9 +27,4 @@ MakeRotateDancer.prototype.step = function (rotation) {
 
 };
 
-MakeRotateDancer.prototype.lineUp = function() {
-  
-};
-
-
 

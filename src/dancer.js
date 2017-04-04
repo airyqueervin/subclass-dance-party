@@ -40,6 +40,8 @@ var MakeDancer = function (top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);
+  this.coordinates = {top: top, left: left};
+  // this.getCoordinates();
 };
 
 MakeDancer.prototype.step = function() {
@@ -54,6 +56,13 @@ MakeDancer.prototype.setPosition = function (top, left) {
     top: top,
     left: left
   };
-  this.$node.css(styleSettings);
-  
+  this.$node.css(styleSettings);  
 };
+
+MakeDancer.prototype.getDown = function () {
+  this.$node.addClass('getDown');
+};
+
+// MakeDancer.prototype.getCoordinates = function () {
+//   console.log( this.$node.position() );
+// };
