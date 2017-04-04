@@ -15,7 +15,8 @@ MakeRotateDancer.prototype.step = function (rotation) {
   this.oldStep.call(this);
   this.$node.addClass('rotateDancer');
   this.$node.animate({
-    left: "+=50"             //we took out height toggle
+    left: '+=50',
+    height: 'toggle'
   }, 5000, function() {
     // Animation complete.
   });

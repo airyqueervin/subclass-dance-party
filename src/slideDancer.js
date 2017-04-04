@@ -1,7 +1,7 @@
 var MakeSlideDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   // console.log(this.step);
-  this.$node = $('<p class="slideDancer"></p>');
+  this.$node = $('<img class="slideDancer" src="https://media0.giphy.com/media/jX2fULlZ71ftS/200w.webp#1"></img>');
   // console.log(this.setPosition)
   this.setPosition(top, left);
 };
