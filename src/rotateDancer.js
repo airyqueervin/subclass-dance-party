@@ -13,7 +13,7 @@ MakeRotateDancer.prototype.oldStep = MakeDancer.prototype.step;
 
 MakeRotateDancer.prototype.step = function (rotation) {
   this.oldStep.call(this);
-  this.$node.removeClass('dancer');
+  // this.$node.removeClass('dancer');
   this.$node.addClass('rotateDancer');
   var random = Math.floor(Math.random() * 100) + 'px';
   this.$node.animate({

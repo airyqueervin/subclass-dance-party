@@ -29,6 +29,9 @@ $(document).ready(function() {
     );
     dancers.push(dancer);
     $('body').append(dancer.$node);
+    $('.dancer').on("mouseenter", function() { 
+      $(this).removeClass('getDown');
+    });
   });
 
   $('.lineUpDancers').on('click', function(event) {
@@ -36,9 +39,8 @@ $(document).ready(function() {
     for (var i = 0; i < window.dancers.length; i++) {
       width += 100;
       window.dancers[i].setPosition('10%', width);
-      if (window.dancers[i].name === 'rotateDancer') {
-        this.$node;
-      }
+      // if (window.dancers[i].name === 'rotateDancer') {
+      // }
     }
     //when we click
     //iterate over dancers array
@@ -73,6 +75,11 @@ $(document).ready(function() {
 
     }
   });
+
+  // $('.dancer').on('mouseenter', function(event) {
+  //    console.log('hi'); 
+  //  });
+//when a dancer is instantiated, then do this:
 
 });
 

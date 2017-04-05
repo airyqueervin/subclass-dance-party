@@ -29,6 +29,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.dancer:hover{
+   border: 5px solid blue;
+}
 .slideDancer{
   /*border:5px solid orange;*/
   border-radius:10px;
